@@ -1,110 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Call window</title>
+  <title>Call Window</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BOOTSTRAP STUFF -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
 </head>
+
+
 <body>
 
 
 
-
-<!-- navbar stuff -->
-
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-    	<div class="navbar-header">
-     		 <a class="navbar-brand" href="#">Window call</a>
-    	</div>
-    	<ul class="nav navbar-nav">
-    		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    		Options
-    			<span class="caret"></span></a>
-    			<ul class="dropdown-menu">
-    				<li><a href="#">Page 1</a></li>
-    				<li><a href="#">Options</a></li>
-    			</ul>
-    		</ul>
-    	</ul>
-    </div>
-</nav>
+<h2>Time compare</h2>
 
 
 
-<div class="media well container">
-	<div class="media-left">
-		<img src="img_avatar1.png" class="media-object" style="width:60px">
-	</div>
-	<div class="media-body">
-		<h4 class="media-heading">Hampus</h4>
-		<!-- Sun icon:  &#9728; -->
-		<p>Last connected with Hampus: 20 days ago &#9728; <br> Location: Poland</p>
-		<a href="hampus.html" class="btn btn-info" role="button">Connect</a>
 
-	</div>
-
-</div>
-
-<div class="media well container">
-	<div class="media-left">
-		<img src="img_avatar1.png" class="media-object" style="width:60px">
-	</div>
-	<div class="media-body">
-		<h4 class="media-heading">Anlin</h4>
-		<!-- moon icon:  &#9790; -->
-		<p>Last connected with Anlin: 15 days ago &#9790; <br> Location: Miami</p>
-		<a href="#" class="btn btn-info" role="button">Connect</a>
-
-	</div>
-
-</div>
+<!--
+	How the timezones are coded:
+	1 = UTC-8
+	2 = UTC-7
+-->
 
 
-<div class="media well container" >
-	<div class="media-left">
-		<img src="img_avatar1.png" class="media-object" style="width:60px">
-	</div>
-	<div class="media-body">
-		<h4 class="media-heading">Olof</h4>
-		<!-- Sun icon:  &#9728; -->
-		<p>Last connected with Olof: 10 days ago &#9728; <br> Location: Stockholm</p>
-		<a href="#" class="btn btn-info" role="button">Connect</a>
+<h3>Where does your friend live?</h3>
+<select id="elementId">
+  <option value="1">California</option>
+  <option value="1" >Nevada</option>
+  <option value="1">Oregon</option>
+  <option value="1">Washington</option>
+  <option value="2">Colorado</option>
+  <option value="2">Montanta</option>
+  <option value="2">New Mexico</option>
+  <option value="2">Utah</option>
 
-	</div>
+</select>
 
-</div>
 
-<div class="media well container" >
-	<div class="media-left">
-		<img src="img_avatar2.png" class="media-object" style="width:60px">
-	</div>
-	<div class="media-body">
-		<h4 class="media-heading">Sandra</h4>
-		<!-- Sun icon:  &#9728; -->
-		<p>Last connected with Sandra: 5 days ago &#9728; <br> Location: Stockholm</p>
-		<a href="#" class="btn btn-info" role="button">Connect</a>
+<p id="sf"></p>
 
-	</div>
 
-</div>
+<button onclick="myFunction()">Click me</button>
 
-<div class="media well container" >
-	<div class="media-left">
-		<img src="img_avatar2.png" class="media-object" style="width:60px">
-	</div>
-	<div class="media-body">
-		<h4 class="media-heading">Ida</h4>
-		<!-- Sun icon:  &#9728; -->
-		<p>Last connected with Ida: 3 days ago &#9728; <br> Location: Stockholm</p>
-		<a href="#" class="btn btn-info" role="button">Connect</a>
+<script type="text/javascript">
 
-	</div>
+function myFunction() {
+	var e = document.getElementById("elementId");
+	var value = e.options[e.selectedIndex].value;
+	var text = e.options[e.selectedIndex].text;   
+	//document.getElementById("Stuff").innerHTML = value;
 
-</div>
+
+	var d = new Date();
+    var utcHour = d.getUTCHours();
+    var timeOffsetFromUTC = d.getTimezoneOffset();
+ 
+
+    //	Sets the local time
+    var localTime = utcHour - (timeOffsetFromUTC/60);
+
+
+    if (value == 1) {		//	Handles UTC-8 case
+    	    // Convert localtime to UTC-8 and check if they are upp
+    	if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+    		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
+    		    document.getElementById("sf").innerHTML = "You can call " + text + " because the time there is about " + (utcHour - 8);				//	The minutes dont show upp
+
+
+
+	    } else {
+ 		   	   	document.getElementById("sf").innerHTML = "San fran is still sleeping";
+  	  }
+    } else if (value == 2) {	//	Handles UTC-7 case
+
+    	    	    // Convert localtime to UTC-8 and check if they are upp
+    	if ((((utcHour - 7) > 7) && ((utcHour - 7) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+    		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
+    		    document.getElementById("sf").innerHTML = "You can call " + text + " because the time there is about " + (utcHour - 7);				//	The minutes dont show upp
+
+
+
+	    } else {
+ 		   	   	document.getElementById("sf").innerHTML = "San fran is still sleeping";
+  	  }
+
+
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
 
 
 </body>
