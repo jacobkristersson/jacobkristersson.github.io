@@ -50,6 +50,11 @@
 
 <p id="sf"></p>
 
+<div  id="success" class="alert alert-success">
+
+</div>
+
+
 
 <button class="btn btn-primary" onclick="myFunction()">Get call window</button>
 
@@ -75,7 +80,7 @@ function myFunction() {
     	    // Convert localtime to UTC-8 and check if they are upp
     	if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-    		    document.getElementById("sf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 8);				//	The minutes dont show upp
+    		    document.getElementById("success").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 8);				//	The minutes dont show upp
 
 
 
