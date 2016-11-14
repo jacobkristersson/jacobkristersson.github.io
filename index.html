@@ -57,7 +57,9 @@
 	<p id="callWindowOpenText"></p>
 </div>
 
-
+<div class="alert alert-danger">
+ 	<p id="callWindowClosedText"></p>
+</div>
 
 <button   none class="btn btn-primary" onclick="myFunction()">Get call window</button>
 
@@ -115,7 +117,7 @@ function myFunction() {
 
 
 	    } else {
- 		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
+ 		   	   	document.getElementById("callWindowClosedText").innerHTML = "Dont call " + userPlace + " is still sleeping";
  		   	}
  	}
 
