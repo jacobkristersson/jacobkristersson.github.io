@@ -89,14 +89,14 @@ function myFunction() {
     	    // Convert localtime to UTC-8 and check if they are upp
     	if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-    		    document.getElementById("callWindowOpen").style.display = 'block';
+    		    document.getElementById("callWindowOpen").style.display = "block";
     		    document.getElementById("callWindowOpen").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 8);				//	The minutes dont show upp
 
 
 
 	    } else {
  		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
- 		   	   	document.getElementById("callWindowOpen").style.display = 'none';
+ 		   	   	document.getElementById("callWindowOpen").style.display = "none";
   	  }
     } else if (value == 2) {	//	Handles UTC-7 case
 
