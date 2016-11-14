@@ -11,6 +11,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+<style type="text/css">
+	.callWindowOpen {
+		display:none;
+	}
+
+</style>
+
+
+
 
 
 </head>
@@ -50,13 +59,13 @@
 
 <p id="sf"></p>
 
-<div  id="success" class="alert alert-success">
+<div  class="alert alert-success callWindowOpen">
 
 </div>
 
 
 
-<button class="btn btn-primary" onclick="myFunction()">Get call window</button>
+<button   none class="btn btn-primary" onclick="myFunction()">Get call window</button>
 
 <script type="text/javascript">
 
@@ -86,6 +95,7 @@ function myFunction() {
 
 	    } else {
  		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
+ 		   	   	document.getElementById("success").style.display = 'none';
   	  }
     } else if (value == 2) {	//	Handles UTC-7 case
 
