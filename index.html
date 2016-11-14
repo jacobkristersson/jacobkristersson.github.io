@@ -29,6 +29,7 @@
 	How the timezones are coded:
 	1 = UTC-8
 	2 = UTC-7
+	3 = UTC+8
 -->
 
 
@@ -42,6 +43,7 @@
   <option value="2">Montanta</option>
   <option value="2">New Mexico</option>
   <option value="2">Utah</option>
+  <option value="3">Beijing</option>
 
 </select>
 
@@ -91,6 +93,28 @@ function myFunction() {
 
 	    } else {
  		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
+ 		   	}
+  	  } else if (value == 3) {
+
+
+    	    	    // Convert localtime to UTC-8 and check if they are upp
+    	if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+    		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
+    		    document.getElementById("sf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);				//	The minutes dont show upp
+
+
+
+	    } else {
+ 		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
+ 		   	}
+
+
+
+
+
+
+
+
   	  }
 
 
