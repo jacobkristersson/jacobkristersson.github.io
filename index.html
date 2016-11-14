@@ -20,7 +20,7 @@
 
 
 
-<h2>Time compare</h2>
+<h2>Call window</h2>
 
 
 
@@ -56,7 +56,7 @@
 function myFunction() {
 	var e = document.getElementById("elementId");
 	var value = e.options[e.selectedIndex].value;
-	var text = e.options[e.selectedIndex].text;   
+	var userPlace = e.options[e.selectedIndex].text;   
 	//document.getElementById("Stuff").innerHTML = value;
 
 
@@ -73,24 +73,24 @@ function myFunction() {
     	    // Convert localtime to UTC-8 and check if they are upp
     	if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-    		    document.getElementById("sf").innerHTML = "You can call " + text + " because the time there is about " + (utcHour - 8);				//	The minutes dont show upp
+    		    document.getElementById("sf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 8);				//	The minutes dont show upp
 
 
 
 	    } else {
- 		   	   	document.getElementById("sf").innerHTML = "San fran is still sleeping";
+ 		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
   	  }
     } else if (value == 2) {	//	Handles UTC-7 case
 
     	    	    // Convert localtime to UTC-8 and check if they are upp
     	if ((((utcHour - 7) > 7) && ((utcHour - 7) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-    		    document.getElementById("sf").innerHTML = "You can call " + text + " because the time there is about " + (utcHour - 7);				//	The minutes dont show upp
+    		    document.getElementById("sf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);				//	The minutes dont show upp
 
 
 
 	    } else {
- 		   	   	document.getElementById("sf").innerHTML = "San fran is still sleeping";
+ 		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
   	  }
 
 
