@@ -57,10 +57,10 @@ function myFunction() {
 
     // Convert localtime to UTC+8 and check if they are upp
   if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-    document.getElementById("UTC-8").innerHTML = "You can call  because the time there is about " + (utcHour + 8);        //  The minutes dont show upp
+    document.getElementById("UTC+8").innerHTML = "You can call  because the time there is about " + (utcHour + 8);        //  The minutes dont show upp
 
       } else {
-            document.getElementById("UTC-8").innerHTML = "Now is not the time to call.";
+            document.getElementById("UTC+8").innerHTML = "Now is not the time to call.";
          
       }
 
