@@ -66,7 +66,7 @@ function myFunction() {
 
 
     // Convert localtime to UTC+1 and check if they are upp
-  if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+  if ((((utcHour + 1) > 7) && ((utcHour + 1) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC+1").innerHTML = "You can call  because the time there is about " + (utcHour + 1);        //  The minutes dont show upp
 
       } else {
@@ -74,6 +74,15 @@ function myFunction() {
          
       }
 
+
+   // Convert localtime to UTC-5 and check if they are upp
+  if ((((utcHour - 5) > 7) && ((utcHour - 5) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+    document.getElementById("UTC-5").innerHTML = "You can call  because the time there is about " + (utcHour  - 5);        //  The minutes dont show upp
+
+      } else {
+            document.getElementById("UTC-5").innerHTML = "Now is not the time to call.";
+         
+      }
 
 }
 
@@ -128,12 +137,13 @@ function myFunction() {
 
 <div class="media well container" >
   <div class="media-left">
-    <img src="img_avatar2.png" class="media-object" style="width:60px">
+    <img src="img_avatar.png" class="media-object" style="width:60px">
   </div>
   <div class="media-body">
-    <h4 class="media-heading">Sandra</h4>
+    <h4 class="media-heading">Jakob</h4>
     <!-- Sun icon:  &#9728; -->
-    <p>Last connected with Sandra: 5 days ago &#9728; <br> Location: Stockholm</p>
+    <p>Last connected with Jakob: 5 days ago <br> Location: New York</p>
+    <p id="UTC-5"></p>
     <a href="#" class="btn btn-info" role="button">Connect</a>
 
   </div>
