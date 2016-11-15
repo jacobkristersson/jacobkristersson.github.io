@@ -1,146 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Call Window</title>
+  <title>Call window</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- BOOTSTRAP STUFF -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-
-
-
-
 </head>
-
-
 <body>
 
 
 
-<h2>Call window</h2>
+
+<!-- navbar stuff -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="navbar-header">
+         <a class="navbar-brand" href="#">Window call</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Options
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Options</a></li>
+          </ul>
+        </ul>
+      </ul>
+    </div>
+</nav>
 
 
 
+<div class="media well container">
+  <div class="media-left">
+    <img src="img_avatar1.png" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Hampus</h4>
+    <!-- Sun icon:  &#9728; -->
+    <p>Last connected with Hampus: 20 days ago &#9728; <br> Location: Poland</p>
+    <a href="hampus.html" class="btn btn-info" role="button">Connect</a>
 
-<!--
-	How the timezones are coded:
-	1 = UTC-8
-	2 = UTC-7
-	3 = UTC+8
--->
+  </div>
 
-
-<h3>Where does your friend live?</h3>
-<select id="elementId">
-  <option value="1">California</option>
-  <option value="1" >Nevada</option>
-  <option value="1">Oregon</option>
-  <option value="1">Washington</option>
-  <option value="2">Colorado</option>
-  <option value="2">Montanta</option>
-  <option value="2">New Mexico</option>
-  <option value="2">Utah</option>
-  <option value="3">Beijing</option>
-
-</select>
-
-
-<p id="sf"></p>
-
-<!-- Boot strap alert alert-suces need to hide this sometimes -->
-<div  class="alert alert-success">
-	<p id="callWindowOpenText"></p>
 </div>
 
-<div class="alert alert-danger">
- 	<p id="callWindowClosedText"></p>
+<div class="media well container">
+  <div class="media-left">
+    <img src="img_avatar1.png" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Anlin</h4>
+    <!-- moon icon:  &#9790; -->
+    <p>Last connected with Anlin: 15 days ago &#9790; <br> Location: Miami</p>
+    <a href="#" class="btn btn-info" role="button">Connect</a>
+
+  </div>
+
 </div>
 
-<button   none class="btn btn-primary" onclick="myFunction()">Get call window</button>
 
-<script type="text/javascript">
+<div class="media well container" >
+  <div class="media-left">
+    <img src="img_avatar1.png" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Olof</h4>
+    <!-- Sun icon:  &#9728; -->
+    <p>Last connected with Olof: 10 days ago &#9728; <br> Location: Stockholm</p>
+    <a href="#" class="btn btn-info" role="button">Connect</a>
 
-function myFunction() {
-	var e = document.getElementById("elementId");
-	var value = e.options[e.selectedIndex].value;
-	var userPlace = e.options[e.selectedIndex].text;   
-	//document.getElementById("Stuff").innerHTML = value;
+  </div>
 
+</div>
 
-	var d = new Date();
-    var utcHour = d.getUTCHours();
-    var timeOffsetFromUTC = d.getTimezoneOffset();
- 
+<div class="media well container" >
+  <div class="media-left">
+    <img src="img_avatar2.png" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Sandra</h4>
+    <!-- Sun icon:  &#9728; -->
+    <p>Last connected with Sandra: 5 days ago &#9728; <br> Location: Stockholm</p>
+    <a href="#" class="btn btn-info" role="button">Connect</a>
 
-    //	Sets the local time
-    var localTime = utcHour - (timeOffsetFromUTC/60);
+  </div>
 
+</div>
 
-    if (value == 1) {		//	Handles UTC-8 case
-    	    // Convert localtime to UTC-8 and check if they are upp
-    	if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-    		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-    		    //document.getElementById("callWindowOpen").style.display = "block";
-    		    document.getElementById("callWindowOpenText").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 8);				//	The minutes dont show upp
+<div class="media well container" >
+  <div class="media-left">
+    <img src="img_avatar2.png" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Ida</h4>
+    <!-- Sun icon:  &#9728; -->
+    <p>Last connected with Ida: 3 days ago &#9728; <br> Location: Stockholm</p>
+    <a href="#" class="btn btn-info" role="button">Connect</a>
 
+  </div>
 
-
-	    } else {
- 		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
- 		   	 
-  	  }
-    } else if (value == 2) {	//	Handles UTC-7 case
-
-    	    	    // Convert localtime to UTC-8 and check if they are upp
-    	if ((((utcHour - 7) > 7) && ((utcHour - 7) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-    		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-    		    document.getElementById("sf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);				//	The minutes dont show upp
-
-
-
-	    } else {
- 		   	   	document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
- 		   	}
-  	  } else if (value == 3) {
-
-
-    	    	    // Convert localtime to UTC-8 and check if they are upp
-    	if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-    		    //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-    		    document.getElementById("sf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);				//	The minutes dont show upp
-
-
-
-	    } else {
- 		   	   	document.getElementById("callWindowClosedText").innerHTML = "Dont call " + userPlace + " is still sleeping";
- 		   	}
- 	}
-
- }
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
+</div>
 
 
 </body>
