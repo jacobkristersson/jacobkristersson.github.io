@@ -50,10 +50,10 @@ function myFunction() {
      
   // Convert localtime to UTC-8 and check if they are upp
   if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-    document.getElementById("sf").innerHTML = "You can call  because the time there is about " + (utcHour - 8);        //  The minutes dont show upp
+    document.getElementById("UTC-8").innerHTML = "You can call  because the time there is about " + (utcHour - 8);        //  The minutes dont show upp
 
       } else {
-            document.getElementById("sf").innerHTML = "Now is not the time to call.";
+            document.getElementById("UTC-8").innerHTML = "Now is not the time to call.";
          
       }
 
@@ -70,8 +70,8 @@ function myFunction() {
   <div class="media-body">
     <h4 class="media-heading">Hampus</h4>
     <!-- Sun icon:  &#9728; -->
-    <p>Last connected with Hampus: 20 days ago &#9728; <br> Location: Poland</p>
-    <p id="sf"></p>
+    <p>Last connected with Hampus: 20 days ago <br> Location: Poland</p>
+    <p id="UTC-8"></p>
     <a href="hampus.html" class="btn btn-info" role="button">Connect</a>
 
   </div>
