@@ -59,38 +59,11 @@ function myFunction() {
             document.getElementById("sf").innerHTML = "You can call  because the time there is about " 
               + (utcHour - 8);        //  The minutes dont show upp
 
-
-
       } else {
             document.getElementById("sf").innerHTML = "Dont call  is still sleeping";
          
       }
-    //  Handles UTC-7 case
-
-                // Convert localtime to UTC-8 and check if they are upp
-      if ((((utcHour - 7) > 7) && ((utcHour - 7) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-            //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-            document.getElementById("UTC-7").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);        //  The minutes dont show upp
-
-
-
-      } else {
-            document.getElementById("sdwaf").innerHTML = "Dont call " + userPlace + " is still sleeping";
-        }
-     
-
-
-                // Convert localtime to UTC-8 and check if they are upp
-      if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-            //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-            document.getElementById("sdaadf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);        //  The minutes dont show upp
-
-
-
-      } else {
-            document.getElementById("callWindowClosedText").innerHTML = "Dont call " + userPlace + " is still sleeping";
-        }
-  }
+    }
 
    
 
