@@ -33,7 +33,71 @@
     </div>
 </nav>
 
+<script type="text/javascript">
 
+function myFunction() {
+  var e = document.getElementById("elementId");
+  var value = e.options[e.selectedIndex].value;
+  var userPlace = e.options[e.selectedIndex].text;   
+  //document.getElementById("Stuff").innerHTML = value;
+
+
+  var d = new Date();
+    var utcHour = d.getUTCHours();
+    var timeOffsetFromUTC = d.getTimezoneOffset();
+ 
+
+    //  Sets the local time
+    var localTime = utcHour - (timeOffsetFromUTC/60);
+
+
+    if (value == 1) {   //  Handles UTC-8 case
+          // Convert localtime to UTC-8 and check if they are upp
+      if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+            //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
+            //document.getElementById("callWindowOpen").style.display = "block";
+            document.getElementById("sf").innerHTML = "You can call " + userPlace + " because the time there is about " 
+              + (utcHour - 8);        //  The minutes dont show upp
+
+
+
+      } else {
+            document.getElementById("sf").innerHTML = "Dont call " + userPlace + " is still sleeping";
+         
+      }
+    } else if (value == 2) {  //  Handles UTC-7 case
+
+                // Convert localtime to UTC-8 and check if they are upp
+      if ((((utcHour - 7) > 7) && ((utcHour - 7) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+            //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
+            document.getElementById("UTC-7").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);        //  The minutes dont show upp
+
+
+
+      } else {
+            document.getElementById("sdwaf").innerHTML = "Dont call " + userPlace + " is still sleeping";
+        }
+      } else if (value == 3) {
+
+
+                // Convert localtime to UTC-8 and check if they are upp
+      if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+            //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
+            document.getElementById("sdaadf").innerHTML = "You can call " + userPlace + " because the time there is about " + (utcHour - 7);        //  The minutes dont show upp
+
+
+
+      } else {
+            document.getElementById("callWindowClosedText").innerHTML = "Dont call " + userPlace + " is still sleeping";
+        }
+  }
+
+        window.onload = myFunction;
+
+
+ }
+
+</script>
 
 <div class="media well container">
   <div class="media-left">
@@ -43,6 +107,7 @@
     <h4 class="media-heading">Hampus</h4>
     <!-- Sun icon:  &#9728; -->
     <p>Last connected with Hampus: 20 days ago &#9728; <br> Location: Poland</p>
+    <p id="sf"></p>
     <a href="hampus.html" class="btn btn-info" role="button">Connect</a>
 
   </div>
@@ -57,6 +122,7 @@
     <h4 class="media-heading">Anlin</h4>
     <!-- moon icon:  &#9790; -->
     <p>Last connected with Anlin: 15 days ago &#9790; <br> Location: Miami</p>
+    <p id="Miami"></p>
     <a href="#" class="btn btn-info" role="button">Connect</a>
 
   </div>
