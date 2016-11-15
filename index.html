@@ -63,10 +63,11 @@ function myFunction() {
   if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC+8").innerHTML = "You can call  because the time there is about " + (utcHour + 8);        //  The minutes dont show upp
     document.getElementById("UTC+8").style.color = "green";
+    document.getElementById("UTC+8").style.fontSize = "larger";
       } else {
             document.getElementById("UTC+8").innerHTML = "Now is not the time to call.";
             document.getElementById("UTC+8").style.color = "red";
-         
+            document.getElementById("UTC+8").style.fontSize = "larger";
       }
 
 
@@ -74,9 +75,11 @@ function myFunction() {
   if ((((utcHour + 1) > 7) && ((utcHour + 1) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC+1").innerHTML = "You can call  because the time there is about " + (utcHour + 1);        //  The minutes dont show upp
     document.getElementById("UTC+1").style.color = "green";
+    document.getElementById("UTC+1").style.fontSize = "larger";
       } else {
             document.getElementById("UTC+1").innerHTML = "Now is not the time to call.";
             document.getElementById("UTC+1").style.color = "red";
+            document.getElementById("UTC+1").style.fontSize = "larger";
       }
 
 
@@ -84,9 +87,11 @@ function myFunction() {
   if ((((utcHour - 5) > 7) && ((utcHour - 5) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC-5").innerHTML = "You can call  because the time there is about " + (utcHour  - 5);        //  The minutes dont show upp
     document.getElementById("UTC-5").style.color = "green";
+    document.getElementById("UTC-5").style.fontSize = "larger";
       } else {
             document.getElementById("UTC-5").innerHTML = "Now is not the time to call.";
             document.getElementById("UTC-5").style.color = "red";
+            document.getElementById("UTC-5").style.fontSize = "larger";
       }
 
 }
