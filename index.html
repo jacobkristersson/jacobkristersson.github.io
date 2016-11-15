@@ -49,7 +49,7 @@ function myFunction() {
   // Convert localtime to UTC-8 and check if they are upp
   if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC-8").innerHTML = "You can call  because the time there is about " + (utcHour - 8);        //  The minutes dont show upp
-
+    document.getElementById("UTC-8").style.color = "green";
       } else {
             document.getElementById("UTC-8").innerHTML = "Now is not the time to call.";
             document.getElementById("UTC-8").style.color = "red";
@@ -60,9 +60,10 @@ function myFunction() {
     // Convert localtime to UTC+8 and check if they are upp
   if ((((utcHour + 8) > 7) && ((utcHour + 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC+8").innerHTML = "You can call  because the time there is about " + (utcHour + 8);        //  The minutes dont show upp
-
+    document.getElementById("UTC+8").style.color = "green";
       } else {
             document.getElementById("UTC+8").innerHTML = "Now is not the time to call.";
+            document.getElementById("UTC+8").style.color = "red";
          
       }
 
@@ -70,20 +71,20 @@ function myFunction() {
     // Convert localtime to UTC+1 and check if they are upp
   if ((((utcHour + 1) > 7) && ((utcHour + 1) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC+1").innerHTML = "You can call  because the time there is about " + (utcHour + 1);        //  The minutes dont show upp
-
+    document.getElementById("UTC+1").style.color = "green";
       } else {
             document.getElementById("UTC+1").innerHTML = "Now is not the time to call.";
-         
+            document.getElementById("UTC+1").style.color = "red";
       }
 
 
    // Convert localtime to UTC-5 and check if they are upp
   if ((((utcHour - 5) > 7) && ((utcHour - 5) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
     document.getElementById("UTC-5").innerHTML = "You can call  because the time there is about " + (utcHour  - 5);        //  The minutes dont show upp
-
+    document.getElementById("UTC-5").style.color = "green";
       } else {
             document.getElementById("UTC-5").innerHTML = "Now is not the time to call.";
-         
+            document.getElementById("UTC-5").style.color = "red";
       }
 
 }
