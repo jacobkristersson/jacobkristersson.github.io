@@ -38,29 +38,27 @@
 function myFunction() {
 
 
-  var d = new Date();
-    var utcHour = d.getUTCHours();
-    var timeOffsetFromUTC = d.getTimezoneOffset();
+  var d = new Date();                               //  Get date object
+  var utcHour = d.getUTCHours();                    //  Get the UTC time
+  var timeOffsetFromUTC = d.getTimezoneOffset();    //  Get local time offset from UTC
  
 
-    //  Sets the local time
-    var localTime = utcHour - (timeOffsetFromUTC/60);
+  var localTime = utcHour - (timeOffsetFromUTC/60);  //  Sets the local time
 
-    document.getElementById("sf").innerHTML = "test";
+ 
 
-       //  Handles UTC-8 case
-          // Convert localtime to UTC-8 and check if they are upp
-      if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
-            //document.getElementById("sf").innerHTML = "You can call UTC-8 time:  " + (utcHour - 8) + " The local time is:  " + localTime;
-            //document.getElementById("callWindowOpen").style.display = "block";
-            document.getElementById("sf").innerHTML = "You can call  because the time there is about " 
-              + (utcHour - 8);        //  The minutes dont show upp
+     
+  // Convert localtime to UTC-8 and check if they are upp
+  if ((((utcHour - 8) > 7) && ((utcHour - 8) < 23)) && ((localTime) > 7) && ((localTime) < 23)) {
+    document.getElementById("sf").innerHTML = "You can call  because the time there is about " + (utcHour - 8);        //  The minutes dont show upp
 
       } else {
             document.getElementById("sf").innerHTML = "Dont call  is still sleeping";
          
       }
-    }
+
+
+}
 
    
 
