@@ -155,6 +155,42 @@ $(".test").first().addClass("jumbotron test");      //  adds the class jumbotron
 
 
 
+function randomSort() {
+
+$(".test").first().removeClass("jumbotron");      // Switch form jumbotron to test
+$(".test").first().appendTo(".row31");
+
+
+
+$(".test").shuffle();
+$(".test").first().appendTo(".first");              // Appends the first test class to first      
+$(".test").first().addClass("jumbotron test");      //  adds the class jumbotron test to the first test element in testwrapper class
+
+}
+
+
+
+
+
+/*
+* Shuffle jQuery array of elements - see Fisher-Yates algorithm
+* Took this form: http://stackoverflow.com/questions/5329201/jquery-move-elements-into-a-random-order
+* Have not checked it
+*/
+jQuery.fn.shuffle = function () {
+    var j;
+    for (var i = 0; i < this.length; i++) {
+        j = Math.floor(Math.random() * this.length);
+        $(this[i]).before($(this[j]));
+    }
+    return this;
+};
+
+
+
+
+
+
 
 
 
