@@ -37,7 +37,7 @@
     
 
 
-function myFunction() {                 //  Sort dataset percentage low to high
+function sortLowToHigh() {                 //  Sort dataset percentage low to high
 
 
 $(".test").first().removeClass("jumbotron");      // Removes the class jumbotron from the first test class
@@ -66,7 +66,33 @@ $(".test").first().addClass("jumbotron test");          //  adds the class jumbo
 }
 
 
+function sortHighToLow() {                 //  Sort dataset percentage high to low
 
+
+$(".test").first().removeClass("jumbotron");      // Removes the class jumbotron from the first test class
+
+$(".test").first().addClass("col-xs-6 col-lg-4");
+
+  var $row = $('.row31');   
+
+  var $wrapper = $('.testWrapper');           //  Puts the class testWrapper into a variable wrapper
+
+  $wrapper.find('.test').sort(function(a, b) {      //  Finds all the classes test in the class testwrapper and sorts them
+     return +b.dataset.percentage - +a.dataset.percentage;      //  Sort function not sure here
+  })
+    .appendTo($row);                  //  Appends everything to wrapper etc puts it into wrapper
+
+  
+
+
+
+$(".test").first().appendTo(".first");                  // Appends the first test class to first   
+$(".test").first().removeClass("col-xs-6 col-lg-4");    // Remove class from new first
+$(".test").first().addClass("jumbotron test");          //  adds the class jumbotron test to the first test element in testwrapper class
+//$(".first").last().remove();      
+
+
+}
 
 
 
@@ -105,7 +131,8 @@ $(".test").first().addClass("jumbotron test");          //  adds the class jumbo
 
 
 
-    <button type="sort" onclick="myFunction()">Try it</button>
+    <button type="sort" onclick="sortLowToHigh()">Sort low to high</button>
+    <button type="sort" onclick="sortHighToLow()">Sort high to low</button>
     <div class="container">
 
       <div class="row row-offcanvas row-offcanvas-right">
