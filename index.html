@@ -160,12 +160,13 @@ function randomSort() {
 
 $(".test").first().removeClass("jumbotron");      // Switch form jumbotron to test
 $(".test").first().addClass("col-xs-6 col-lg-4");
-  var $wrapper = $('.testWrapper');
+$(".test").first().appendTo(".row31");
+  //var $wrapper = $('.testWrapper');
 
 
- var $row = $('.row31');  
+ var $row = $(".row31");  
 
- var arrayOfTest = $wrapper.find('.test');
+ var arrayOfTest = $row31.find('.test');
 
     var j;
     for (var i = 0; i < arrayOfTest.length; i++) {
@@ -178,11 +179,11 @@ $(".test").first().addClass("col-xs-6 col-lg-4");
 
 
 
-//$(".test").first().appendTo(".row");          // Appends the first test class to first      
+$(".test").first().appendTo(".first");
 $(".test").first().removeClass("col-xs-6 col-lg-4");    // Remove class from new first
 //$(".test").first().appendTo(".first");          // Appends the first test class to first    
 $(".test").first().addClass("jumbotron test");      //  adds the class jumbotron test to the first test element in testwrapper class
-$(".jumbotron").appendTo(".first");
+
 }
 
 
