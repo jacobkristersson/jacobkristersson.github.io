@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0044)http://getbootstrap.com/examples/offcanvas/# -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -9,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Off Canvas Template for Bootstrap</title>
+    <title>WeTalk!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -19,48 +21,26 @@
 
     <!-- Custom styles for this template -->
     <link href="./css/offcanvas.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
+    <link rel="stylesheet" href="css/main.css">
 
 
   <script type="text/javascript">
-    
 
+
+    
 
 function sortLowToHigh() {                        //  Sort dataset percentage low to high
 
+$(".heading-smaller-persons").html("<h2>Sort order: low to high</h2>");
 
-$(".test").first().removeClass("jumbotron");      // Removes the class jumbotron from the first test class
+  var $row = $('.smaller-persons');   
 
-$(".test").first().addClass("col-xs-6 col-lg-4");
+  var $wrapper = $('.smaller-persons');           //  Puts the class testWrapper into a variable wrapper
 
-  var $row = $('.row31');   
-
-  var $wrapper = $('.testWrapper');           //  Puts the class testWrapper into a variable wrapper
-
-  $wrapper.find('.test').sort(function(a, b) {      //  Finds all the classes test in the class testwrapper and sorts them
+  $wrapper.find('.more-contacts').sort(function(a, b) {      //  Finds all the classes test in the class testwrapper and sorts them
      return +a.dataset.percentage - +b.dataset.percentage;      //  Sort function not sure here
   })
     .appendTo($row);                  //  Appends everything to wrapper etc puts it into wrapper
-
-  
-
-
-
-$(".test").first().appendTo(".first");                  // Appends the first test class to first   
-$(".test").first().removeClass("col-xs-6 col-lg-4");    // Remove class from new first
-$(".test").first().addClass("jumbotron test");          //  adds the class jumbotron test to the first test element in testwrapper class
-//$(".first").last().remove();      
 
 
 }
@@ -69,43 +49,29 @@ $(".test").first().addClass("jumbotron test");          //  adds the class jumbo
 function sortHighToLow() {                 //  Sort dataset percentage high to low
 
 
-$(".test").first().removeClass("jumbotron");      // Removes the class jumbotron from the first test class
+$(".heading-smaller-persons").html("<h2>Sort order: high to low</h2>");
 
-$(".test").first().addClass("col-xs-6 col-lg-4");
+  var $row = $('.smaller-persons');   
 
-  var $row = $('.row31');   
+  var $wrapper = $('.smaller-persons');         //  Puts the class testWrapper into a variable wrapper
 
-  var $wrapper = $('.testWrapper');           //  Puts the class testWrapper into a variable wrapper
-
-  $wrapper.find('.test').sort(function(a, b) {      //  Finds all the classes test in the class testwrapper and sorts them
+  $wrapper.find('.more-contacts').sort(function(a, b) {      //  Finds all the classes test in the class testwrapper and sorts them
      return +b.dataset.percentage - +a.dataset.percentage;      //  Sort function not sure here
   })
     .appendTo($row);                  //  Appends everything to wrapper etc puts it into wrapper
 
   
 
-
-
-$(".test").first().appendTo(".first");                  // Appends the first test class to first   
-$(".test").first().removeClass("col-xs-6 col-lg-4");    // Remove class from new first
-$(".test").first().addClass("jumbotron test");          //  adds the class jumbotron test to the first test element in testwrapper class
-//$(".first").last().remove();      
-
-
 }
-
-
 
 function sortAlphaDescending() {
 
-$(".test").first().removeClass("jumbotron");      // Switch form jumbotron to test
-
-$(".test").first().addClass("col-xs-6 col-lg-4");
-  var $wrapper = $('.testWrapper');
+$(".heading-smaller-persons").html("<h2>Sort order: alphabeticaly Descending</h2>");
+  var $wrapper = $('.smaller-persons');
 
 
- var $row = $('.row31');  
-  $wrapper.find('.test').sort(function(a,b){
+ var $row = $('.smaller-persons');  
+  $wrapper.find('.more-contacts').sort(function(a,b){
   var an = a.getAttribute('data-name'),
     bn = b.getAttribute('data-name');
 
@@ -119,22 +85,20 @@ $(".test").first().addClass("col-xs-6 col-lg-4");
 }).appendTo($row);
 
 
-$(".test").first().appendTo(".first");          // Appends the first test class to first  
-$(".test").first().removeClass("col-xs-6 col-lg-4");    // Remove class from new first    
-$(".test").first().addClass("jumbotron test");      //  adds the class jumbotron test to the first test element in testwrapper class
 }
 
 
 
 function sortAlphaAscending() {
 
-$(".test").first().removeClass("jumbotron");      // Switch form jumbotron to test
-$(".test").first().addClass("col-xs-6 col-lg-4");
-  var $wrapper = $('.testWrapper');
+
+$(".heading-smaller-persons").html("<h2>Sort order: alphabeticaly Ascending</h2>");
+
+  var $wrapper = $('.smaller-persons');
 
 
- var $row = $('.row31');  
-  $wrapper.find('.test').sort(function(a,b){
+ var $row = $('.smaller-persons');  
+  $wrapper.find('.more-contacts').sort(function(a,b){
   var an = a.getAttribute('data-name'),
     bn = b.getAttribute('data-name');
 
@@ -147,25 +111,18 @@ $(".test").first().addClass("col-xs-6 col-lg-4");
   return 0;
 }).appendTo($row);
 
-
-$(".test").first().appendTo(".first");          // Appends the first test class to first      
-$(".test").first().removeClass("col-xs-6 col-lg-4");    // Remove class from new first
-$(".test").first().addClass("jumbotron test");      //  adds the class jumbotron test to the first test element in testwrapper class
 }
 
 
-
 function randomSort() {
+$(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
+
+  var $wrapper = $('.smaller-persons');
 
 
-$(".test").first().removeClass("jumbotron");      // Switch form jumbotron to test
-$(".test").first().addClass("col-xs-6 col-lg-4");
-  var $wrapper = $('.testWrapper');
+ var $row = $('.smaller-persons');  
 
-
- var $row = $('.row31');  
-
- var arrayOfTest = $wrapper.find('.test');
+ var arrayOfTest = $wrapper.find('.more-contacts');
 
     var j;
     for (var i = 0; i < arrayOfTest.length; i++) {
@@ -175,31 +132,14 @@ $(".test").first().addClass("col-xs-6 col-lg-4");
 
 
 
-
-
-
-//$(".test").first().appendTo(".row");          // Appends the first test class to first      
-$(".test").first().removeClass("col-xs-6 col-lg-4");    // Remove class from new first
-//$(".test").first().appendTo(".first");          // Appends the first test class to first    
-$(".test").first().addClass("jumbotron test");      //  adds the class jumbotron test to the first test element in testwrapper class
-
 }
 
 
 
+</script>
 
-
-
-
-
-
-
-
-
-
-  </script>
-
-  <body>
+</head>
+ <body>
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -209,122 +149,198 @@ $(".test").first().addClass("jumbotron test");      //  adds the class jumbotron
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://getbootstrap.com/examples/offcanvas/#">Project name</a>
+          <a class="navbar-brand" href="#">WeTalk!</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="http://getbootstrap.com/examples/offcanvas/#">Home</a></li>
-            <li><a href="http://getbootstrap.com/examples/offcanvas/#about">Sort last</a></li>
-            <li><a href="http://getbootstrap.com/examples/offcanvas/#contact">Contact</a></li>
-          </ul>
+        	<ul class="nav navbar-nav">
+        		<li><a href="#">Edit list</a></li>
+        		<li class="dropdown">
+        		<a class="dropdown-toggle" data-toggle="dropdown" 
+        		href="#">Sort order<span class="caret"></span></a>
+        			<ul class="dropdown-menu">
+        				<li onclick="randomSort()"><a href="#">Random</a></li>
+        				<li class="activated"><a href="#">Recommended</a></li>
+        				<li onclick="sortLowToHigh()"><a href="#">Low to high</a></li>
+        				<li onclick="sortHighToLow()"><a href="#">High to low</a></li>
+        				<li onclick="sortAlphaAscending()"><a href="#">Alpahbetically ascending</a></li>
+        				<li onclick="sortAlphaDescending()"><a href="#">Alphabeticall descending</a></li>
+        			</ul>
+        		</li>
+        		<li class="dropdown">
+        		<a class="dropdown-toggle" data-toggle="dropdown" 
+        		href="#">Comms apps<span class="caret"></span></a>
+        			<ul class="dropdown-menu">
+        				<li class="disabled"><a href="#">Dialer</a></li>
+        				<li><a href="#">Skype</a></li>
+        				<li><a href="#">WhatsApp</a></li>
+        				<li><a href="#">Messanger</a></li>
+        			</ul>
+        		</li>
+        		<li class="divider"></li>
+        		<li class="disabled"><a href="#">About</a></li>
+        	</ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
+    
+
+ 
+  <div class="container">
+    <div class="row">
+    	<div class="main-person">
+    		<div class="jumbotron" style="position: relative; left: 0; top: 0;">
+    			<a href="details.html"><img class="img" src="img/main_page.png"
+    			style="position: relative; top: 0; left: 0;"/>
+    			</a>
+    			<img class="img-overlay img" src="img/call_icon.png"
+    			style="position: absolute; bottom: 10%; right: 5%; width:10%; height:auto;"/>
+    
+    	</div>
+    </div>
 
 
-    <button type="sort" onclick="randomSort()">Random</button>
-    <button type="sort" onclick="sortLowToHigh()">Sort low to high</button>
-    <button type="sort" onclick="sortHighToLow()">Sort high to low</button>
-    <button type="sort" onclick="sortAlphaDescending()">Sort alphabeticaly Descending</button>
-    <button type="sort" onclick="sortAlphaAscending()">Sort alphabeticaly Ascending</button>
 
-    <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="notfirst">
-        rs testWrapper">
-          <!--<p class="pull-right visible-xs">-->
-            <!--<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>-->
-          <!--</p>-->
-          <div class="first">
-          <div class="jumbotron test" data-percentage="38" data-name="Fredrik">
-            <h2>Fredrik</h2>
-            <a href="http://getbootstrap.com/examples/offcanvas/#">
-              <img class="img-responsive" src="img_avatar1.png" alt="Contact picture">
-            </a>
-              <p>Last connected with: 38 hours ago.</p>
-
-          </div>
-          </div>
-
-          <div class="row31">
-          <div class="row">
-            <div class="col-xs-6 col-lg-4 test" data-percentage="66" data-name="Hampus">
-              <h2>Hampus</h2>
-              <a href="http://getbootstrap.com/examples/offcanvas/#">
-              <img class="img-responsive" src="img_avatar2.png" alt="Contact picture">
-              </a>
-              <p>Last connected with: 66 hours ago.</p>
+    <div class="heading-smaller-persons"><h1>Sort order: Recommended</h1></div>
+     <div class="row">
+    <div class="smaller-persons">
    
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 test" data-percentage="44" data-name="Sandra" >
-              <h2>Sandra</h2>
-              <a href="http://getbootstrap.com/examples/offcanvas/#">
-              <img class="img-responsive" src="img_avatar3.png" alt="Contact picture">
-              </a>
-              <p>Last connected with: 44 hours ago.</p>
+    	
+    	<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="24" data-name="Nona M">
+    		<a href="details.html">
+    			<img class="img img-more-contacts day" src="img/profile_2.png"/>
+    		</a>
+			<p class="detail-name">Nona M</p>
+			<p class="detail-time">1 day ago</p>
+		</div>
 
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 test" data-percentage="33" data-name="Ida" >
-              <h2>Ida</h2>
-              <a href="http://getbootstrap.com/examples/offcanvas/#">
-              <img class="img-responsive" src="img_avatar4.png" alt="Contact picture">
-              </a>
-              <p>Last connected with: 33 hours ago.</p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 test" data-percentage="14"  data-name="Anlin">
-              <h2>Anlin</h2>
-              <a href="http://getbootstrap.com/examples/offcanvas/#">
-              <img class="img-responsive" src="img_avatar1.png" alt="Contact picture">
-              </a>
-              <p>Last connected with: 14 hours ago.</p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 test" data-percentage="13" data-name="Stina" >
-              <h2>Stina</h2>
-              <a href="http://getbootstrap.com/examples/offcanvas/#">
-              <img class="img-responsive" src="img_avatar3.png" alt="Contact picture">
-              </a>
-              <p>Last connected with: 13 hours ago.</p>
+		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="48" data-name="Mike">
+			<a href="details.html">
+				<img class="img img-more-contacts night" src="img/profile_3.png"/>
+			</a>
+			<p class="detail-name">Mike</p>
+			<p class="detail-time">2 day ago</p>
+		</div>
 
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 test" data-percentage="666" data-name="Agnes" >
-              <h2>Agnes</h2>
-              <a href="http://getbootstrap.com/examples/offcanvas/#">
-              <img class="img-responsive" src="img_avatar4.png" alt="Contact picture">
-              </a>
-              <p>Last connected with: 666 hours ago.</p>
+		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="17" data-name="John">
+			<a href="details.html">
+				<img class="img img-more-contacts night" src="img/profile_4.png"/>
+			</a>
+			<p class="detail-name">John</p>
+			<p class="detail-time">17 hours ago</p>
+		</div>
 
-            </div><!--/.col-xs-6.col-lg-4-->
-          </div><!--/row-->
-          </div>
-        </div><!--/.col-xs-12.col-sm-9-->
+		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="336" data-name="Dave D">
+			<a href="details.html">
+				<img class="img img-more-contacts day" src="img/profile_5.png"/>
+			</a>
+			<p class="detail-name">Dave D</p>
+			<p class="detail-time">14 days ago</p>
+		</div>
 
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <!--<div class="list-group">-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item active">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-            <!--<a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Link</a>-->
-          <!--</div>-->
-        </div><!--/.sidebar-offcanvas-->
-      </div><!--/row-->
+		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="72" data-name="Tom">
+			<a href="details.html">
+				<img class="img img-more-contacts night" src="img/profile_6.png"/>
+			</a>
+			<p class="detail-name">Tom</p>
+			<p class="detail-time">3 day ago</p>
+		</div>
 
-      <hr>
+		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="252" data-name="Beck">
+			<a href="details.html">
+				<img class="img img-more-contacts day" src="img/profile_2.png"/>
+			</a>
+			<p class="detail-name">Beck</p>
+			<p class="detail-time">6 day ago</p>
+		</div>
 
-      <footer>
-        <p>© 2016 Company, Inc.</p>
-      </footer>
+		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="24" data-name="Hugo">
+			<a href="details.html">
+				<img class="img img-more-contacts night" src="img/profile_3.png"/>
+			</a>
+			<p class="detail-name">Hugo</p>
+			<p class="detail-time">1 day ago</p>
+		</div>
 
-    </div><!--/.container-->
+		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="4" data-name="Bastian">
+			<a href="details.html">
+				<img class="img img-more-contacts day" src="img/profile_1.png"/>
+			</a>
+			<p class="detail-name">Bastian</p>
+			<p class="detail-time">4 hours ago</p>
+		</div>
 
+	
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="24" data-name="Stina">
+				<a href="details.html">
+					<img class="img img-more-contacts day" src="img/profile_2.png"/>
+				</a>
+				<p class="detail-name">Stina</p>
+				<p class="detail-time">1 day ago</p>
+			</div>
 
-    <!-- Bootstrap core JavaScript
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="48" data-name="Gustaf">
+				<a href="details.html">
+					<img class="img img-more-contacts night" src="img/profile_3.png"/>
+				</a>
+				<p class="detail-name">Gustaf</p>
+				<p class="detail-time">2 day ago</p>
+			</div>
+
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="17" data-name="Filip">
+				<a href="details.html">
+					<img class="img img-more-contacts night" src="img/profile_4.png"/>
+				</a>
+				<p class="detail-name">Filip</p>
+				<p class="detail-time">17 hours ago</p>
+			</div>
+
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="336" data-name="Daniel">
+				<a href="details.html">
+					<img class="img img-more-contacts day" src="img/profile_5.png"/>
+				</a>
+				<p class="detail-name">Daniel</p>
+				<p class="detail-time">14 days ago</p>
+			</div>
+
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="72" data-name="Eduardo">
+				<a href="details.html">
+					<img class="img img-more-contacts night" src="img/profile_6.png"/>
+				</a>
+				<p class="detail-name">Eduardo</p>
+				<p class="detail-time">3 day ago</p>
+			</div>
+
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="144" data-name="Ash">
+				<a href="details.html">
+					<img class="img img-more-contacts day" src="img/profile_2.png"/>
+				</a>
+				<p class="detail-name">Ash</p>
+				<p class="detail-time">6 day ago</p>
+			</div>
+
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="24" data-name="Bertil">
+				<a href="details.html">
+					<img class="img img-more-contacts night" src="img/profile_3.png"/>
+				</a>
+				<p class="detail-name">Bertil</p>
+				<p class="detail-time">1 day ago</p>
+			</div>
+
+			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="96" data-name="Claes">
+				<a href="details.html">
+					<img class="img img-more-contacts day" src="img/profile_1.png"/>
+				</a>
+				<p class="detail-name">Claes</p>
+				<p class="detail-time">4 day ago</p>
+
+			</div>
+	
+    
+    </div><!-- smaller persons -->
+</div>	<!-- div row -->
+  </div><!--/.container-->
+</div>
+	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./js/jquery.min.js"></script>
@@ -333,6 +349,5 @@ $(".test").first().addClass("jumbotron test");      //  adds the class jumbotron
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
     <script src="./js/offcanvas.js"></script>
-  
-
-</body></html>
+</body>
+</html>
