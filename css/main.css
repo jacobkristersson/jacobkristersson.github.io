@@ -8,7 +8,10 @@
 }
 
 
-
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #f7b599;
+    color:#f7b599;
+  }
 
 
 .img{
