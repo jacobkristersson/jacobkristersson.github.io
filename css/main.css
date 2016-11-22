@@ -3,6 +3,14 @@
     float:left;
 }
 
+.nav.navbar-nav li a {    /* Does not change the whole navbar  Added by jacob to change color of navbar text*/
+    color: white;
+}
+
+
+
+
+
 .img{
     width:100%;
     padding-top:10px;

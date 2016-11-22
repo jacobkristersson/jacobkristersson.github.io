@@ -66,7 +66,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: high to low</h2>");
 
 function sortAlphaDescending() {
 
-$(".heading-smaller-persons").html("<h2>Sort order: alphabeticaly Descending</h2>");
+$(".heading-smaller-persons").html("<h2>Sort order: A to Z</h2>");
   var $wrapper = $('.smaller-persons');
 
 
@@ -92,7 +92,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: alphabeticaly Descending</h2
 function sortAlphaAscending() {
 
 
-$(".heading-smaller-persons").html("<h2>Sort order: alphabeticaly Ascending</h2>");
+$(".heading-smaller-persons").html("<h2>Sort order: Z to A</h2>");
 
   var $wrapper = $('.smaller-persons');
 
@@ -138,6 +138,8 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 
 </script>
 
+
+
 </head>
  <body>
     <nav class="navbar navbar-fixed-top navbar-inverse">
@@ -158,33 +160,34 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
         		<a class="dropdown-toggle" data-toggle="dropdown" 
         		href="#">Sort order<span class="caret"></span></a>
         			<ul class="dropdown-menu">
-        				<li onclick="randomSort()"><a href="#">Random</a></li>
-        				<li class="activated"><a href="#">Recommended</a></li>
-        				<li onclick="sortLowToHigh()"><a href="#">Low to high</a></li>
-        				<li onclick="sortHighToLow()"><a href="#">High to low</a></li>
-        				<li onclick="sortAlphaAscending()"><a href="#">Alpahbetically ascending</a></li>
-        				<li onclick="sortAlphaDescending()"><a href="#">Alphabeticall descending</a></li>
+        				<li onclick="randomSort()"><a href="#"><font color="white">Random</font></a></li>
+        				<li class="activated"><a href="#"><font color="white">Recommended</font></a></li>
+        				<li onclick="sortLowToHigh()"><a href="#"><font color="white">Low to high</font></a></li>
+        				<li onclick="sortHighToLow()"><a href="#"><font color="white">High to low</font></a></li>
+                <li onclick="sortAlphaDescending()"><a href="#"><font color="white">Name A to Z</font></a></li>
+        				<li onclick="sortAlphaAscending()"><a href="#"><font color="white">Name Z to A</font></a></li>
+
         			</ul>
         		</li>
         		<li class="dropdown">
         		<a class="dropdown-toggle" data-toggle="dropdown" 
         		href="#">Comms apps<span class="caret"></span></a>
         			<ul class="dropdown-menu">
-        				<li class="disabled"><a href="#">Dialer</a></li>
-        				<li><a href="#">Skype</a></li>
-        				<li><a href="#">WhatsApp</a></li>
-        				<li><a href="#">Messanger</a></li>
+        				<li class="disabled"><a href="#"><font color="white">Dialer</font></a></li>
+        				<li><a href="#"><font color="white">Skype</font></a></li>
+        				<li><a href="#"><font color="white">WhatsApp</font></a></li>
+        				<li><a href="#"><font color="white">Messanger</font></a></li>
         			</ul>
         		</li>
         		<li class="divider"></li>
-        		<li class="disabled"><a href="#">About</a></li>
+        		<li class="disabled"><a href="#"><font color="white">About</font></a></li>
         	</ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
     
 
- 
+ <h4>Favorites:</h4>
   <div class="container">
     <div class="row">
     	<div class="main-person">
@@ -210,7 +213,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
     			<img class="img img-more-contacts day" src="img/profile_2.png"/>
     		</a>
 			<p class="detail-name">Nona M</p>
-			<p class="detail-time">1 day ago</p>
+			<p class="detail-time">Last call: 1 day ago</p>
 		</div>
 
 		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="48" data-name="Mike">
@@ -218,7 +221,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 				<img class="img img-more-contacts night" src="img/profile_3.png"/>
 			</a>
 			<p class="detail-name">Mike</p>
-			<p class="detail-time">2 day ago</p>
+			<p class="detail-time">Last call: 2 day ago</p>
 		</div>
 
 		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="17" data-name="John">
@@ -226,7 +229,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 				<img class="img img-more-contacts night" src="img/profile_4.png"/>
 			</a>
 			<p class="detail-name">John</p>
-			<p class="detail-time">17 hours ago</p>
+			<p class="detail-time">Last call: 17 hours ago</p>
 		</div>
 
 		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="336" data-name="Dave D">
@@ -234,7 +237,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 				<img class="img img-more-contacts day" src="img/profile_5.png"/>
 			</a>
 			<p class="detail-name">Dave D</p>
-			<p class="detail-time">14 days ago</p>
+			<p class="detail-time">Last call: 14 days ago</p>
 		</div>
 
 		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="72" data-name="Tom">
@@ -242,15 +245,15 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 				<img class="img img-more-contacts night" src="img/profile_6.png"/>
 			</a>
 			<p class="detail-name">Tom</p>
-			<p class="detail-time">3 day ago</p>
+			<p class="detail-time">Last call: 3 day ago</p>
 		</div>
 
 		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="252" data-name="Beck">
 			<a href="details.html">
 				<img class="img img-more-contacts day" src="img/profile_2.png"/>
 			</a>
-			<p class="detail-name">Beck</p>
-			<p class="detail-time">6 day ago</p>
+			<p class="detail-name">Becky</p>
+			<p class="detail-time">Last call: 6 day ago</p>
 		</div>
 
 		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="24" data-name="Hugo">
@@ -258,15 +261,15 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 				<img class="img img-more-contacts night" src="img/profile_3.png"/>
 			</a>
 			<p class="detail-name">Hugo</p>
-			<p class="detail-time">1 day ago</p>
+			<p class="detail-time">Last call: 1 day ago</p>
 		</div>
 
 		<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="4" data-name="Bastian">
 			<a href="details.html">
 				<img class="img img-more-contacts day" src="img/profile_1.png"/>
 			</a>
-			<p class="detail-name">Bastian</p>
-			<p class="detail-time">4 hours ago</p>
+			<p class="detail-name">Elsa</p>
+			<p class="detail-time">Last call: 4 hours ago</p>
 		</div>
 
 	
@@ -275,7 +278,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 					<img class="img img-more-contacts day" src="img/profile_2.png"/>
 				</a>
 				<p class="detail-name">Stina</p>
-				<p class="detail-time">1 day ago</p>
+				<p class="detail-time">Last call: 1 day ago</p>
 			</div>
 
 			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="48" data-name="Gustaf">
@@ -283,7 +286,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 					<img class="img img-more-contacts night" src="img/profile_3.png"/>
 				</a>
 				<p class="detail-name">Gustaf</p>
-				<p class="detail-time">2 day ago</p>
+				<p class="detail-time">Last call: 2 day ago</p>
 			</div>
 
 			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="17" data-name="Filip">
@@ -291,7 +294,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 					<img class="img img-more-contacts night" src="img/profile_4.png"/>
 				</a>
 				<p class="detail-name">Filip</p>
-				<p class="detail-time">17 hours ago</p>
+				<p class="detail-time">Last call: 17 hours ago</p>
 			</div>
 
 			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="336" data-name="Daniel">
@@ -299,7 +302,7 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 					<img class="img img-more-contacts day" src="img/profile_5.png"/>
 				</a>
 				<p class="detail-name">Daniel</p>
-				<p class="detail-time">14 days ago</p>
+				<p class="detail-time">Last call: 14 days ago</p>
 			</div>
 
 			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="72" data-name="Eduardo">
@@ -307,15 +310,15 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 					<img class="img img-more-contacts night" src="img/profile_6.png"/>
 				</a>
 				<p class="detail-name">Eduardo</p>
-				<p class="detail-time">3 day ago</p>
+				<p class="detail-time">Last call: 3 day ago</p>
 			</div>
 
 			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="144" data-name="Ash">
 				<a href="details.html">
 					<img class="img img-more-contacts day" src="img/profile_2.png"/>
 				</a>
-				<p class="detail-name">Ash</p>
-				<p class="detail-time">6 day ago</p>
+				<p class="detail-name">Ashley</p>
+				<p class="detail-time">Last call: 6 day ago</p>
 			</div>
 
 			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="24" data-name="Bertil">
@@ -323,15 +326,15 @@ $(".heading-smaller-persons").html("<h2>Sort order: random</h2>");
 					<img class="img img-more-contacts night" src="img/profile_3.png"/>
 				</a>
 				<p class="detail-name">Bertil</p>
-				<p class="detail-time">1 day ago</p>
+				<p class="detail-time">Last call: 1 day ago</p>
 			</div>
 
 			<div class="col-xs-3 col-lg-4 more-contacts" data-percentage="96" data-name="Claes">
 				<a href="details.html">
 					<img class="img img-more-contacts day" src="img/profile_1.png"/>
 				</a>
-				<p class="detail-name">Claes</p>
-				<p class="detail-time">4 day ago</p>
+				<p class="detail-name">Samantha</p>
+				<p class="detail-time">Last call: 4 day ago</p>
 
 			</div>
 	
