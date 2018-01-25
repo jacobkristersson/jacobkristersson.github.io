@@ -4492,17 +4492,15 @@ var codeRepo = [
 	//	Setup click listener
 	button.addEventListener("click", function() {
 	
-	for (var i = 0; i < inputs.length; i++) {
-		console.log(inputs[i].value);
-	}
 
-	var text = " - ";
+	var text = " ";
 
 	for (var index = 0; index < inputs.length; index++) {
 		if (nameAndID[inputs[index].value] != undefined) {
 
 
-			text += " " + nameAndID[inputs[index].value].name; + " - ";
+			text += " " + nameAndID[inputs[index].value].name;
+			text += " - ";
 		}
 	}
 
