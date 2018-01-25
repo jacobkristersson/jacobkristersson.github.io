@@ -4140,7 +4140,7 @@ var codeRepo = [
 			//Set up scales
 			var xScale = d3.scale.ordinal()
 				.domain(d3.range(dataset[0].length))
-				.rangeBands([0, w]);						//	Changed this to .rangeBands instead of .rangeBoundBands dosent 													//	seem to be a big diffrence
+				.rangeBands([0, w]);						//	Changed this to .rangeBands instead of .rangeBoundBands dosent 													//	seem to be a almost no diffrence
 																        //	Goold link on rangBands: http://d3-wiki.readthedocs.io/zh_CN/master/Ordinal-Scales/
 		
 
@@ -4150,7 +4150,7 @@ var codeRepo = [
 				.domain([0, 120])
 				.range([0, h]);
 				
-			//Easy colors accessible via a 10-step ordinal scale
+			//Easy colors accessible via a 20-step ordinal scale
 			var colors = d3.scale.category20();
 		
 			//Create SVG element
