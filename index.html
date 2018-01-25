@@ -4511,6 +4511,14 @@ var codeRepo = [
 		console.log(inputs[i].value);
 	}
 
+	var text = " ";
+
+
+	for (var index = 0; index < inputs.length; index++) {
+		if (nameAndID[inputs[index].value] != undefined) {
+			text += " " nameAndID[inputs.[index].value];
+		}
+	}
     // var text = " ";
     // if (nameAndID[inputMember1.value] != undefined) {
     //    text += " " + nameAndID[input1.value].name;
