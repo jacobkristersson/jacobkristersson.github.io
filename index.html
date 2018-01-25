@@ -4208,15 +4208,15 @@ var codeRepo = [
 
 <div>
 	<h4>Input index of youre chosen group members:</h4>
-  		<input id="inputMember1" type="number" name="quantity">
-  		<input id="inputMember2" type="number" name="quantity">
-  		<input id="inputMember3" type="number" name="quantity">
- 		<input id="inputMember4" type="number" name="quantity">
- 		<input id="inputMember5" type="number" name="quantity">
- 		<input id="inputMember6" type="number" name="quantity">
- 		<input id="inputMember7" type="number" name="quantity">
- 		<input id="inputMember8" type="number" name="quantity">
- 		<input id="inputMember9" type="number" name="quantity">
+  		<input 	class="inputMember" type="number" name="quantity">
+  		<input  class="inputMember" type="number" name="quantity">
+  		<input  class="inputMember" type="number" name="quantity">
+ 		<input  class="inputMember" type="number" name="quantity">
+ 		<input  class="inputMember" type="number" name="quantity">
+ 		<input  class="inputMember" type="number" name="quantity">
+ 		<input 	class="inputMember" type="number" name="quantity">
+ 		<input  class="inputMember" type="number" name="quantity">
+ 		<input 	class="inputMember" type="number" name="quantity">
  		<button id="button">Submit</button>
 
 </div>
@@ -4483,61 +4483,64 @@ var codeRepo = [
 ]
 
 //  nameAndID
+	
+	// var input1 = document.querySelector("#inputMember1");
+	// var input2 = document.querySelector("#inputMember2");
+	// var input3 = document.querySelector("#inputMember3");
+	// var input4 = document.querySelector("#inputMember4");
+	// var input5 = document.querySelector("#inputMember5");
+	// var input6 = document.querySelector("#inputMember6");
+	// var input7 = document.querySelector("#inputMember7");
+	// var input8 = document.querySelector("#inputMember8");
+	// var input9 = document.querySelector("#inputMember9");
 
-	var input1 = document.querySelector("#inputMember1");
-	var input2 = document.querySelector("#inputMember2");
-	var input3 = document.querySelector("#inputMember3");
-	var input4 = document.querySelector("#inputMember4");
-	var input5 = document.querySelector("#inputMember5");
-	var input6 = document.querySelector("#inputMember6");
-	var input7 = document.querySelector("#inputMember7");
-	var input8 = document.querySelector("#inputMember8");
-	var input9 = document.querySelector("#inputMember9");
+
+
+
+
+
+	var inputs = document.querySelectorAll(".inputMember")
 	var button = document.querySelector("#button");
-  var yourGroup = document.querySelector("#yourGroup");
+	var yourGroup = document.querySelector("#yourGroup");
 
 
 	//	Setup click listener
 	button.addEventListener("click", function() {
 	
-		console.log(input2.value);
-		console.log(input3.value);
-		console.log(input4.value);
-		console.log(input5.value);
-		console.log(input6.value);
-		console.log(input7.value);
-		console.log(input8.value);
-		console.log(input9.value);
-    var text = " ";
-    if (nameAndID[inputMember1.value] != undefined) {
-       text += " " + nameAndID[input1.value].name;
-    }
-    if (nameAndID[inputMember2.value] != undefined) {
-       text += ", " + nameAndID[input2.value].name;
-    }
-    if (nameAndID[inputMember3.value] != undefined) {
-       text += ", " + nameAndID[input3.value].name;
-    }
-    if (nameAndID[inputMember4.value] != undefined) {
-       text += ", " + nameAndID[input4.value].name;
-    }
-    if (nameAndID[inputMember5.value] != undefined) {
-       text += ", " + nameAndID[input5.value].name;
-    }
-    if (nameAndID[inputMember6.value] != undefined) {
-       text += ", " + nameAndID[input6.value].name;
-    }
-    if (nameAndID[inputMember7.value] != undefined) {
-       text += ", " + nameAndID[input7.value].name;
-    }
-    if (nameAndID[inputMember8.value] != undefined) {
-       text += ", " + nameAndID[input8.value].name;
-    }
-    if (nameAndID[inputMember9.value] != undefined) {
-       text += ", " + nameAndID[input9.value].name;
-    }
+	for (var i = 0; i < inputs.length; i++) {
+		console.log(inputs[i])
+	}
 
-    yourGroup.textContent = text;
+    // var text = " ";
+    // if (nameAndID[inputMember1.value] != undefined) {
+    //    text += " " + nameAndID[input1.value].name;
+    // }
+    // if (nameAndID[inputMember2.value] != undefined) {
+    //    text += ", " + nameAndID[input2.value].name;
+    // }
+    // if (nameAndID[inputMember3.value] != undefined) {
+    //    text += ", " + nameAndID[input3.value].name;
+    // }
+    // if (nameAndID[inputMember4.value] != undefined) {
+    //    text += ", " + nameAndID[input4.value].name;
+    // }
+    // if (nameAndID[inputMember5.value] != undefined) {
+    //    text += ", " + nameAndID[input5.value].name;
+    // }
+    // if (nameAndID[inputMember6.value] != undefined) {
+    //    text += ", " + nameAndID[input6.value].name;
+    // }
+    // if (nameAndID[inputMember7.value] != undefined) {
+    //    text += ", " + nameAndID[input7.value].name;
+    // }
+    // if (nameAndID[inputMember8.value] != undefined) {
+    //    text += ", " + nameAndID[input8.value].name;
+    // }
+    // if (nameAndID[inputMember9.value] != undefined) {
+    //    text += ", " + nameAndID[input9.value].name;
+    // }
+
+    // yourGroup.textContent = text;
 
 
 
