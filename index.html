@@ -4207,7 +4207,7 @@ var codeRepo = [
 
 
 <div>
-	<h4>Input index of youre chosen group members:</h4>
+	<h4>Input index of youre chosen group members (Be careful to not input duplicate members):</h4>
   		<input 	class="inputMember" type="number" name="quantity">
   		<input  class="inputMember" type="number" name="quantity">
   		<input  class="inputMember" type="number" name="quantity">
@@ -4497,16 +4497,6 @@ var codeRepo = [
 	}
 
 	var text = " ";
-	var multipleValues = false;
-	//	Check for multiple of the same values
-	for (var z = 0; z < inputs.length - 1; z++) {
-		var temp = inputs[z].value;
-		if (temp == inputs[z + 1].value ) {
-			multipleValues = true;
-		}
-
-	}
-	console.log(multipleValues);
 
 	for (var index = 0; index < inputs.length; index++) {
 		if (nameAndID[inputs[index].value] != undefined) {
