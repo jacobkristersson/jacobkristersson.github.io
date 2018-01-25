@@ -4482,21 +4482,6 @@ var codeRepo = [
   }
 ]
 
-//  nameAndID
-	
-	// var input1 = document.querySelector("#inputMember1");
-	// var input2 = document.querySelector("#inputMember2");
-	// var input3 = document.querySelector("#inputMember3");
-	// var input4 = document.querySelector("#inputMember4");
-	// var input5 = document.querySelector("#inputMember5");
-	// var input6 = document.querySelector("#inputMember6");
-	// var input7 = document.querySelector("#inputMember7");
-	// var input8 = document.querySelector("#inputMember8");
-	// var input9 = document.querySelector("#inputMember9");
-
-
-
-
 
 
 	var inputs = document.querySelectorAll(".inputMember")
@@ -4512,46 +4497,28 @@ var codeRepo = [
 	}
 
 	var text = " ";
+	var multipleValues = false;
+	//	Check for multiple of the same values
+	for (var z = 0; z < inputs.length - 1; z++) {
+		var temp = inputs[z].value;
+		if (temp == inputs[z + 1].value ) {
+			multipleValues = true;
+		}
 
+	}
+	console.log(multipleValues);
 
 	for (var index = 0; index < inputs.length; index++) {
 		if (nameAndID[inputs[index].value] != undefined) {
+
 
 			text += ", " + nameAndID[inputs[index].value].name;
 		}
 	}
 
 	yourGroup.textContent = text;
-    // var text = " ";
-    // if (nameAndID[inputMember1.value] != undefined) {
-    //    text += " " + nameAndID[input1.value].name;
-    // }
-    // if (nameAndID[inputMember2.value] != undefined) {
-    //    text += ", " + nameAndID[input2.value].name;
-    // }
-    // if (nameAndID[inputMember3.value] != undefined) {
-    //    text += ", " + nameAndID[input3.value].name;
-    // }
-    // if (nameAndID[inputMember4.value] != undefined) {
-    //    text += ", " + nameAndID[input4.value].name;
-    // }
-    // if (nameAndID[inputMember5.value] != undefined) {
-    //    text += ", " + nameAndID[input5.value].name;
-    // }
-    // if (nameAndID[inputMember6.value] != undefined) {
-    //    text += ", " + nameAndID[input6.value].name;
-    // }
-    // if (nameAndID[inputMember7.value] != undefined) {
-    //    text += ", " + nameAndID[input7.value].name;
-    // }
-    // if (nameAndID[inputMember8.value] != undefined) {
-    //    text += ", " + nameAndID[input8.value].name;
-    // }
-    // if (nameAndID[inputMember9.value] != undefined) {
-    //    text += ", " + nameAndID[input9.value].name;
-    // }
 
-    // yourGroup.textContent = text;
+
 
 
 
