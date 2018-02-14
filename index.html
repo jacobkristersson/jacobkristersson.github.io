@@ -70,6 +70,7 @@ table, th, td {
     <th>Color</th>
     <th>Year</th> 
     <th>Justifiable: Divorce</th>
+    <th>Justifiable: Abortion</th>
     <th>Justifiable: Homosexuality</th>
     <th>How important is God in your life?</th>
     <th>Justifiable: Suicide</th>
@@ -86,6 +87,7 @@ table, th, td {
     <th>Color</th>
     <th>Year</th> 
     <th>Justifiable: Divorce</th>
+    <th>Justifiable: Abortion</th>
     <th>Justifiable: Homosexuality</th>
     <th>How important is God in your life?</th>
     <th>Justifiable: Suicide</th>
@@ -96,6 +98,7 @@ table, th, td {
   <tr >
     <td class="hoverTable"></td>
     <td class="hoverTable"><div class="colorBox"> </div></td>
+    <td class="hoverTable"></td>
     <td class="hoverTable"></td>
     <td class="hoverTable"></td>
     <td class="hoverTable"></td>
@@ -196,16 +199,18 @@ d3.csv("Project2CountryDataWVS.csv", function(error, cars) {
         var cell8 = row.insertCell(7);
         var cell9 = row.insertCell(8);
         var cell10 = row.insertCell(9);
+        var cell11 = row.insertCell(10);
         cell1.innerHTML = d.name;
         cell2.appendChild(div);        // Here should be color
         cell3.innerHTML = d.year;
         cell4.innerHTML = d["Justifiable: Divorce"];
-        cell5.innerHTML = d["Justifiable: Homosexuality"];
-        cell6.innerHTML = d["How important is God in your life"];
-        cell7.innerHTML = d["Justifiable: Suicide"];
-        cell8.innerHTML = d["How many children do you have"];
-        cell9.innerHTML = d["How much freedom of choice and control over own life"];
-        cell10.innerHTML = d["What age did you compelete your education"];
+        cell5.innerHTML = d["Justifiable: Abortion"];
+        cell6.innerHTML = d["Justifiable: Homosexuality"];
+        cell7.innerHTML = d["How important is God in your life"];
+        cell8.innerHTML = d["Justifiable: Suicide"];
+        cell9.innerHTML = d["How many children do you have"];
+        cell10.innerHTML = d["How much freedom of choice and control over own life"];
+        cell11.innerHTML = d["What age did you compelete your education"];
 
       
       })
@@ -215,15 +220,17 @@ d3.csv("Project2CountryDataWVS.csv", function(error, cars) {
         var color = countryColor(d.name);   //  Get color frome the countryColor fucntion
         // hoverTableText[1].textContent = color;
         // hoverTableText[1].style.color = color;
+        hoverTableText[1].textContent = d["Justifiable: Abortion"];
         colorBox.style.background = color;      //  Set the div colorbox inside the table to a specific
         hoverTableText[2].textContent = d.year;
         hoverTableText[3].textContent = d["Justifiable: Divorce"];
-        hoverTableText[4].textContent = d["Justifiable: Homosexuality"];
-        hoverTableText[5].textContent = d["How important is God in your life"];
-        hoverTableText[6].textContent = d["Justifiable: Suicide"];
-        hoverTableText[7].textContent = d["How many children do you have"];
-        hoverTableText[8].textContent = d["How much freedom of choice and control over own life"];
-        hoverTableText[9].textContent = d["What age did you compelete your education"];
+        hoverTableText[4].textContent = d["Justifiable: Abortion"];
+        hoverTableText[5].textContent = d["Justifiable: Homosexuality"];
+        hoverTableText[6].textContent = d["How important is God in your life"];
+        hoverTableText[7].textContent = d["Justifiable: Suicide"];
+        hoverTableText[8].textContent = d["How many children do you have"];
+        hoverTableText[9].textContent = d["How much freedom of choice and control over own life"];
+        hoverTableText[10].textContent = d["What age did you compelete your education"];
       })
       .on("mouseout", function(d) {     //  Not sure i want to do anything on the mouseout
         // console.log(d.name)
