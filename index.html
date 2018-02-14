@@ -220,7 +220,7 @@ d3.csv("Project2CountryDataWVS.csv", function(error, cars) {
         var color = countryColor(d.name);   //  Get color frome the countryColor fucntion
         // hoverTableText[1].textContent = color;
         // hoverTableText[1].style.color = color;
-        hoverTableText[1].textContent = d["Justifiable: Abortion"];
+
         colorBox.style.background = color;      //  Set the div colorbox inside the table to a specific
         hoverTableText[2].textContent = d.year;
         hoverTableText[3].textContent = d["Justifiable: Divorce"];
