@@ -109,8 +109,8 @@ table, th, td {
     <td class="hoverTable"></td>
   </tr>
 </table>
-<p><em>The values are mean values. Wave 6: 2010 - 2014, Wave 5: 2005 - 2009, Wave 4: 1999-2004, Wave 3: 1995-1998 </em> <p>
-<p><em>1: Never Justifiable and 10: Always justifiable</em></p>
+<h2><em>Chart uses mean values. Wave 3: 1995-1998, Wave 4: 1999-2004, Wave 5: 2005-2009 and Wave 6: 2010-2014</em> </h2>
+<h3><em>1: Never Justifiable and 10: Always justifiable</em></h3>
 <script>
 
 var hoverTableText = document.querySelectorAll(".hoverTable");
@@ -151,11 +151,11 @@ d3.csv("Project2CountryDataWVS.csv", function(error, cars) {
     .data(cars)
     .enter().append("path")
          .style("stroke-dasharray", function (d) {
-        if (d.Wave == 3) {
+        if (d["What Wave question was asked in"] == 3) {
           return "20, 20"
-        } else if (d.Wave == 4) {
+        } else if (d["What Wave question was asked in"] == 4) {
           return "10, 10"
-        } else if (d.Wave == 5) {
+        } else if (d["What Wave question was asked in"] == 5) {
           return "5, 5"
         } //  does nothing if d.Wave is 6
       })
@@ -169,11 +169,11 @@ d3.csv("Project2CountryDataWVS.csv", function(error, cars) {
       .enter().append("path")
       .attr("d", path)
       .style("stroke-dasharray", function (d) {
-        if (d.Wave == 3) {
+        if (d["What Wave question was asked in"]== 3) {
           return "20, 20"
-        } else if (d.Wave == 4) {
+        } else if (d["What Wave question was asked in"] == 4) {
           return "10, 10"
-        } else if (d.Wave == 5) {
+        } else if (d["What Wave question was asked in"] == 5) {
           return "5, 5"
         } //  does nothing if d.Wave is 6
       })
@@ -370,10 +370,10 @@ function brush() {
 <strong>Analytical trail 1</strong>
 
 The parallel coordinates shows 31 countries over 20 years, 8 questions and the mean value of their answers.
-We brush Justifiable: Abortion from 5 to the max value and brush Wave 6 (year 2010-2014) to see in which countries people find abortion more justifiable in Wave 6 (year 2010-2014).
+We brush Justifiable: Abortion from 5 to the max value and brush What Wave question was asked in to 6 (year 2010-2014) to see in which countries people find abortion more justifiable in Wave 6 (year 2010-2014).
 Now we see in the parallel coordinates that the countries in which people think abortion is more justifiable for them god is less important in their lives.
 In most of the countries where people think abortion is more justifiable they also find divorce and homosexuality is more justifiable. 
-We brush so we get data from Waves 6-3.
+We brush so we get data from What Wave question was asked in to Waves 6-3.
 Now we see that abortion has become over the years more justifiable in most countries.
 We hover over the green, read and cornflower lines and see that abortion has become less justifiable for Spain between 2007-2011, Sweden between 2006-2011 and New Zealand between 2004 and 2011. 
 We can’t find Germany's and Estonia's Wave 6 (year 2010 - 2014) line thus abortion has become less justifiable in Germany and Estonia.
@@ -381,7 +381,7 @@ We can’t find Germany's and Estonia's Wave 6 (year 2010 - 2014) line thus abor
 </p>
 <p>
 <strong>Analytical trail 2</strong>
-Let's now look at countries attitudes that find Suicide least and most Justifiable and how this variable might correlate with their attitudes to How important god is in your life in the years 2010 - 2014. We use brush on Wave 6 and brush between from 0 to 2 on Justifiable: Suicide. There seems to be some inverse correlation between How important god is in your life and Justifiable: Suicide. We now use our same brush and drag it upwards so we see the largest values of Justifiable:Suicide. Now i would say there there still is a inverse correlation between How important god is in your life and Justifiable: Suicide but it is less pronounced than before and, South Africa and United States are exceptions that stick out from the other values.
+Let's now look at countries attitudes that find Suicide least and most Justifiable and how this variable might correlate with their attitudes to How important god is in your life in the years 2010 - 2014. We use brush on on What Wave question was asked in so we only get Wave 6 and brush between from 0 to 2 on Justifiable: Suicide. There seems to be some inverse correlation between How important god is in your life and Justifiable: Suicide. We now use our same brush and drag it upwards so we see the largest values of Justifiable:Suicide. Now i would say there there still is a inverse correlation between How important god is in your life and Justifiable: Suicide but it is less pronounced than before and, South Africa and United States are exceptions that stick out from the other values.
 Now we use the brushing on Justifiable: Suicide values 2 to 2.5 and i'm not sure you can say that there is an inverse correlation here because for some countries like Russia even though god is less important than in Mexico,  Russia finds suicide more Justifiable.
 </p>
 
